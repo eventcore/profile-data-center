@@ -1,6 +1,6 @@
 # Profile Data Center API Documentation
 
-## changelog
+## Changelog
 
 - ### [Get Changelog Count](/api-documentation/changelog/getcount.md)
 
@@ -8,7 +8,7 @@
 
 - ### [Get Changelog By ID](/api-documentation/changelog/getbyid.md)
 
-## event
+## Event
 
 - ### [Search Events](/api-documentation/event/search.md)
 
@@ -20,7 +20,7 @@
 
 - ### [Get Event By ID](/api-documentation/event/getbyid.md)
 
-## profile
+## Profile
 
 - ### [Get Profile Count](/api-documentation/profile/getcount.md)
 
@@ -40,17 +40,17 @@
 
 - ### [Migrate Profile](/api-documentation/profile/migrate.md)
 
-## profileschema
+## Profile Schema
 
 - ### [Get Profile Schema](/api-documentation/profileschema/get.md)
 
-- ### [Replace Profile Schema](/api-documentation/profileschema/put.md)
+- ### [Replace Profile Schema](/api-documentation/profileschema/update.md)
 
 - ### [Patch Profile Schema](/api-documentation/profileschema/patch.md)
 
 - ### [Update Profile Event Schema](/api-documentation/profileschema/patchevent.md)
 
-## program
+## Program
 
 - ### [Get Program By ID](/api-documentation/program/getbyid.md)
 
@@ -60,7 +60,7 @@
 
 - ### [Get All Programs](/api-documentation/program/get.md)
 
-## tagschema
+## Tag Schema
 
 - ### [Get Tag Schema](/api-documentation/tagschema/get.md)
 
