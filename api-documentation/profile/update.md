@@ -1,16 +1,16 @@
-# Update Event
+# Update Profile
 
-Update an Event.
+Update a Profile.
 
 ## Overview
 
-**URL** : `/api/Event/`
+**URL** : `/api/Profile/`
 
 **Method** : `PUT`
 
 **Auth required** : YES
 
-**Permissions required** : User can update Events -- OR -- User has a SuperUser role
+**Permissions required** : User can update Profiles -- OR -- User has a SuperUser role
 
 **Parameters** :
 

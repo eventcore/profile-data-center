@@ -46,7 +46,7 @@
 
 - ### [Replace Profile Schema](/api-documentation/profileschema/put.md)
 
-- ### [Update Profile Schema](/api-documentation/profileschema/patch.md)
+- ### [Patch Profile Schema](/api-documentation/profileschema/patch.md)
 
 - ### [Update Profile Event Schema](/api-documentation/profileschema/patchevent.md)
 

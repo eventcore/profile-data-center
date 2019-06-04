@@ -1,22 +1,22 @@
-# Update Event
+# Create Event
 
-Update an Event.
+Create an Event.
 
 ## Overview
 
 **URL** : `/api/Event/`
 
-**Method** : `PUT`
+**Method** : `POST`
 
 **Auth required** : YES
 
-**Permissions required** : User can update Events -- OR -- User has a SuperUser role
+**Permissions required** : User can create Events -- OR -- User has a SuperUser role
 
 **Parameters** :
 
 ```json
 {
-    "eventToUpdate":
+    "eventToCreate":
     {
         "type": object,
         "properties": {
@@ -35,7 +35,7 @@ Update an Event.
 **Content example** :
 
 ```json
-    "eventToUpdate":
+    "eventToCreate":
     {
         "type": object,
         "properties": {
@@ -56,17 +56,7 @@ Update an Event.
 {}
 ```
 
-**Context** : User is authorized, data change references a non-existant event
-
-**Code** : `404 NOT FOUND`
-
-**Content example** :
-
-```
-{}
-```
-
-**Context** : User is authorized, data change attempts to rename an event
+**Context** : User is authorized, but event name is already used
 
 **Code** : `409 CONFLICT`
 
