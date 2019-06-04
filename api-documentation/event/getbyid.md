@@ -1,6 +1,6 @@
 # Get Event by ID
 
-Get a Event by ID.
+Get a Event by ID value.
 
 ## Overview
 
@@ -15,23 +15,22 @@ Get a Event by ID.
 **Parameters** :
 
 ```json
+"id":
 {
-    "id":
-    {
-        "required": true,
-        "validation": "[Must be a valid GUID]"
-    },
-    "subpath":
-    {
-        "required": false,
-        "validation":"[Must be a valid sub-path of this schema]"
-    }
+    "required": true,
+    "type":"string",
+    "validation": "[Must be a valid Event ID]"
+},
+"subpath":
+{
+    "required": false,
+    "validation":"[Must be a valid sub-path of this schema]"
 }
 ```
 
 ## Success Responses
 
-**Condition** : User requests event by an ID  which exists i.e. `/api/Event(00000000-0000-0000-0000-000000000000)`
+**Condition** : User requests event by an ID  which exists i.e. `/api/Event(12345)`
 
 **Code** : `200 OK`
 
@@ -39,17 +38,22 @@ Get a Event by ID.
 
 ```json
 {
-  "additionalProp1": {},
-  "additionalProp2": {},
-  "additionalProp3": {}
+    "documentType": "RegistrationEvent",
+    "id": "12345",
+    "eventName": "testEvent12345",
+    "startDate": "2019-05-03",
+    "endDate": "2019-05-25",
+    "description": "A Registration Event",
+    "_ts": 1558020704
 }
 ```
 
-**Context** : User requests an ID which does not exist i.e. `/api/Event(00000000-0000-0000-0000-000000000001)`
+**Condition** : User requests an Event By ID which does not exist i.e. `/api/Event(00000)`
 
 **Code** : `204 NO CONTENT`
 
 **Content example** :
-```
-Returns No Content if there is no Event found by the search.
+
+```json
+{}
 ```

@@ -19,7 +19,8 @@ Get a Program by ID.
     "id":
     {
         "required": true,
-        "validation": "[Must be a valid GUID]"
+        "type": "string",
+        "validation": "[Must be a valid Program ID - 3 to 40 alphanumeric characters with no spaces]"
     },
     "subpath":
     {
@@ -31,7 +32,7 @@ Get a Program by ID.
 
 ## Success Responses
 
-**Condition** : User requests an ID which exists i.e. `/api/Program(00000000-0000-0000-0000-000000000000)`
+**Condition** : User requests an ID which exists i.e. `/api/Program(RealProgram)`
 
 **Code** : `200 OK`
 
@@ -39,17 +40,20 @@ Get a Program by ID.
 
 ```json
 {
-  "additionalProp1": {},
-  "additionalProp2": {},
-  "additionalProp3": {}
+    "description": "Real Program",
+    "id": "RealProgram",
+    "_ts": 1558478289
 }
 ```
 
-**Context** : User requests an ID which does not exist i.e. `/api/Program(00000000-0000-0000-0000-000000000001)`
+## Error Responses
 
-**Code** : `204 NO CONTENT`
+**Condition** : User requests an ID which does not exist i.e. `/api/Program(NotReal)`
+
+**Code** : `404 NOT FOUND`
 
 **Content example** :
-```
-Returns No Content if there is no Event found by the search.
+
+```json
+{}
 ```

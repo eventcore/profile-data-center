@@ -52,7 +52,7 @@ Migrate a Profile.
 
 ## Error Responses
 
-**Context** : User is authorized, data is invalid
+**Condition** : User is authorized, data is invalid
 
 **Code** : `400 BAD REQUEST`
 
@@ -62,7 +62,7 @@ Migrate a Profile.
 {}
 ```
 
-**Context** : User is authorized, but profile in either fromId or toId does not exist
+**Condition** : User is authorized, but profile in either fromId or toId does not exist
 
 **Code** : `404 NOT FOUND`
 
@@ -72,7 +72,7 @@ Migrate a Profile.
 {}
 ```
 
-**Context** : User is authorized, but profile in either fromId or toId has been marked as deleted
+**Condition** : User is authorized, but profile in either fromId or toId has been marked as deleted
 
 **Code** : `400 BAD REQUEST`
 

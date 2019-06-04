@@ -1,6 +1,6 @@
 # Create Event
 
-Create an Event.
+Create a new Event within a program.
 
 ## Overview
 
@@ -8,7 +8,7 @@ Create an Event.
 
 **Method** : `POST`
 
-**Auth required** : YES
+**Auth required** : YES - User must be authenticated to the Program.
 
 **Permissions required** : User can create Events -- OR -- User has a SuperUser role
 
@@ -46,22 +46,22 @@ Create an Event.
 
 ## Error Responses
 
-**Context** : User is authorized, data is invalid
+**Condition** : User is authorized, data is invalid.
 
 **Code** : `400 BAD REQUEST`
 
 **Content example** :
 
-```
+```json
 {}
 ```
 
-**Context** : User is authorized, but event name is already used
+**Condition** : User is authorized, but event name already exists.
 
 **Code** : `409 CONFLICT`
 
 **Content example** :
 
-```
+```json
 {}
 ```

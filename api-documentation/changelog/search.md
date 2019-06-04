@@ -1,6 +1,6 @@
 # Search Changelogs
 
-Search Changelogs.
+Search Changelog records using OData query options.
 
 ## Overview
 
@@ -12,26 +12,11 @@ Search Changelogs.
 
 **Permissions required** : User can read Changelogs -- OR -- User has a SuperUser role
 
-**Parameters** :
-
-```json
-{
-    "id":
-    {
-        "required": true,
-        "validation": "[Must be a valid GUID]"
-    },
-    "subpath":
-    {
-        "required": false,
-        "validation":"[Must be a valid sub-path of this schema]"
-    }
-}
-```
+**Parameters** : OData search parameters are supported - [OData - Basic Querying Tutorial](https://www.odata.org/getting-started/basic-tutorial/#queryData)
 
 ## Success Responses
 
-**Condition** : User requests an ID which exists i.e. `/api/Changelog(00000000-0000-0000-0000-000000000000)`
+**Condition** : User provides search parameters which match records i.e. `/api/Changelog?$filter=valid`
 
 **Code** : `200 OK`
 
@@ -45,12 +30,12 @@ Search Changelogs.
 }
 ```
 
-**Context** : User requests an ID which does not exist i.e. `/api/Changelog(00000000-0000-0000-0000-000000000001)`
+**Condition** : User provides search parameters which do not match records i.e. `/api/Changelog?$filter=invalid`
 
 **Code** : `204 NO CONTENT`
 
 **Content example** :
 
-```
-Returns No Content if there is no Changelog found by the search.
+```json
+{}
 ```

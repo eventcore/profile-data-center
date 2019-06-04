@@ -45,7 +45,7 @@ Delete Profile.
 
 ## Error Responses
 
-**Context** : User is authorized, data is invalid
+**Condition** : User is authorized, data is invalid
 
 **Code** : `400 BAD REQUEST`
 
@@ -55,7 +55,7 @@ Delete Profile.
 {}
 ```
 
-**Context** : User is authorized, but provided ID does not exist
+**Condition** : User is authorized, but provided ID does not exist
 
 **Code** : `404 NOT FOUND`
 

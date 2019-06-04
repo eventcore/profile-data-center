@@ -46,22 +46,22 @@ Create a Profile.
 
 ## Error Responses
 
-**Context** : User is authorized, data is invalid
+**Condition** : User is authorized, data is invalid
 
 **Code** : `400 BAD REQUEST`
 
 **Content example** :
 
-```
+```json
 {}
 ```
 
-**Context** : User is authorized, but event name is already used
+**Condition** : User is authorized, but event name is already used
 
 **Code** : `409 CONFLICT`
 
 **Content example** :
 
-```
+```json
 {}
 ```

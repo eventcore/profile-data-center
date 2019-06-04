@@ -1,6 +1,6 @@
 # Add Credentials
 
-Update a Profile & add credentials.
+Update a Profile and add credentials.
 
 ## Overview
 
@@ -14,20 +14,22 @@ Update a Profile & add credentials.
 
 **Parameters** :
 
+***Request Querystring***
+
+```json
+"id":
+{
+    "required": true,
+    "validation": "[Must be a valid GUID]"
+}
+```
+
+***Request Body***: Must be a valid Profile Credential object (in JSON schema format)
+
 ```json
 {
-    "querystring":{
-        "id":
-        {
-            "required": true,
-            "validation": "[Must be a valid GUID]"
-        }
-    },
-    "body":
-    {
-        "oid": "anoid",
-        "provider": "b2c"
-    }
+    "oid": "anoid",
+    "provider": "b2c"
 }
 ```
 
@@ -40,15 +42,15 @@ Update a Profile & add credentials.
 **Content example** :
 
 ```json
-    {
-        "oid": "anoid",
-        "provider": "b2c"
-    }
+{
+    "oid": "anoid",
+    "provider": "b2c"
+}
 ```
 
 ## Error Responses
 
-**Context** : User is authorized, data is invalid
+**Condition** : User is authorized, data is invalid
 
 **Code** : `400 BAD REQUEST`
 
@@ -58,7 +60,7 @@ Update a Profile & add credentials.
 {}
 ```
 
-**Context** : User is authorized, data change references a non-existant event
+**Condition** : User is authorized, data change references a non-existent event
 
 **Code** : `404 NOT FOUND`
 
@@ -68,7 +70,7 @@ Update a Profile & add credentials.
 {}
 ```
 
-**Context** : User is authorized, data change attempts to rename an event
+**Condition** : User is authorized, data change attempts to rename an event
 
 **Code** : `409 CONFLICT`
 

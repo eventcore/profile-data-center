@@ -16,7 +16,7 @@ Get Profile Count.
 
 ```json
 {
-    "count":
+    "$count":
     {
         "required": true,
         "validation": "[Must be the explicit value $count]"
@@ -26,14 +26,12 @@ Get Profile Count.
 
 ## Success Responses
 
+**Condition** : User is authorized
+
 **Code** : `200 OK`
 
 **Content example** :
 
 ```json
-{
-  "value": {
-      12345
-  }
-} 
+12345
 ```

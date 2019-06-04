@@ -1,6 +1,6 @@
 # Get Profile by ID
 
-Get a Profile by ID.
+Get a Profile by ID value.
 
 ## Overview
 
@@ -99,11 +99,13 @@ Get a Profile by ID.
   }
 }
 ```
-**Context** : User requests an ID which does not exist i.e. `/api/Profile(00000000-0000-0000-0000-000000000001)`
+
+**Condition** : User requests an ID which does not exist i.e. `/api/Profile(00000000-0000-0000-0000-000000000001)`
 
 **Code** : `204 NO CONTENT`
 
-**Content example** : 
+**Content example** :
+
 ```json
 {}
 ```
