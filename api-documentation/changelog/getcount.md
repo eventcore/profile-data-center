@@ -35,5 +35,5 @@ Get Changelog Count.
   "value": {
       12345
   }
-} 
+}
 ```

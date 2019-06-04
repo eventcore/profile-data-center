@@ -1,16 +1,16 @@
-# Get Changelog by ID
+# Search Events
 
-Get a Changelog by ID.
+Search Events.
 
 ## Overview
 
-**URL** : `/api/Changelog('{id}')/{subpath}`
+**URL** : `/api/Event/`
 
 **Method** : `GET`
 
 **Auth required** : YES
 
-**Permissions required** : User can read Changelogs -- OR -- User has a SuperUser role
+**Permissions required** : User can read Events -- OR -- User has a SuperUser role
 
 **Parameters** :
 
@@ -31,7 +31,7 @@ Get a Changelog by ID.
 
 ## Success Responses
 
-**Condition** : User requests changelog by an ID  which exists i.e. `/api/Changelog(00000000-0000-0000-0000-000000000000)`
+**Condition** : User requests an ID which exists i.e. `/api/Event?$filter=valid`
 
 **Code** : `200 OK`
 
@@ -45,11 +45,11 @@ Get a Changelog by ID.
 }
 ```
 
-**Context** : User requests an ID which does not exist i.e. `/api/Changelog(00000000-0000-0000-0000-000000000001)`
+**Context** : User requests an ID which does not exist i.e. `/api/Event?$filter=invalid`
 
 **Code** : `204 NO CONTENT`
 
 **Content example** :
 ```
-Returns No Content if there is no Changelog found by the search.
+Returns No Content if there is no Event found by the search.
 ```
