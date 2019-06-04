@@ -50,6 +50,7 @@ Get a Changelog by ID.
 **Code** : `204 NO CONTENT`
 
 **Content example** :
-```
+
+```json
 Returns No Content if there is no Changelog found by the search.
 ```

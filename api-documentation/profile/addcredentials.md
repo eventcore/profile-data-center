@@ -54,7 +54,7 @@ Update a Profile & add credentials.
 
 **Content example** :
 
-```
+```json
 {}
 ```
 
@@ -64,7 +64,7 @@ Update a Profile & add credentials.
 
 **Content example** :
 
-```
+```json
 {}
 ```
 
@@ -74,6 +74,6 @@ Update a Profile & add credentials.
 
 **Content example** :
 
-```
+```json
 {}
 ```

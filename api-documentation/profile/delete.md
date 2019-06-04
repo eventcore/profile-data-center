@@ -40,7 +40,7 @@ Delete Profile.
   "value": {
       12345
   }
-} 
+}
 ```
 
 ## Error Responses

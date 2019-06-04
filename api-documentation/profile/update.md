@@ -52,7 +52,7 @@ Update a Profile.
 
 **Content example** :
 
-```
+```json
 {}
 ```
 
@@ -62,7 +62,7 @@ Update a Profile.
 
 **Content example** :
 
-```
+```json
 {}
 ```
 
@@ -72,6 +72,6 @@ Update a Profile.
 
 **Content example** :
 
-```
+```json
 {}
 ```
