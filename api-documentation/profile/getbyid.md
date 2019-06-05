@@ -31,7 +31,7 @@ Get a Profile by ID value.
 
 ## Success Responses
 
-**Condition** : User requests profile by an ID  which exists i.e. `/api/Profile(00000000-0000-0000-0000-000000000000)`
+**Condition** : User is authorized, requests profile by an ID  which exists i.e. `/api/Profile(00000000-0000-0000-0000-000000000000)`
 
 **Code** : `200 OK`
 
@@ -100,7 +100,7 @@ Get a Profile by ID value.
 }
 ```
 
-**Condition** : User requests an ID which does not exist i.e. `/api/Profile(00000000-0000-0000-0000-000000000001)`
+**Condition** : User is authorized, requests an ID which does not exist i.e. `/api/Profile(00000000-0000-0000-0000-000000000001)`
 
 **Code** : `204 NO CONTENT`
 

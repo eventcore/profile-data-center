@@ -15,12 +15,10 @@ Get Profile Metadata.
 **Parameters** :
 
 ```json
+"$metadata":
 {
-    "$metadata":
-    {
-        "required": true,
-        "validation": "[Must be the explicit value $metadata]"
-    }
+    "required": true,
+    "validation": "[Must be the explicit value $metadata]"
 }
 ```
 

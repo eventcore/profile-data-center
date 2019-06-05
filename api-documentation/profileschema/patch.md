@@ -43,3 +43,20 @@ Patch Profile Schema.
   }
 }
 ```
+
+## Error Responses
+
+**Condition** : User is authorized, but edits to profile schema will generate data conflicts. Summary of conflicts and verification token is presented in the response.
+
+**Code** : `409 CONFLICT`
+
+**Content example** :
+
+```json
+{
+  "message": "There are changes to this schema that would affect data!",
+  "schemaChanges": [...],
+  "verificationToken": "..."
+
+}
+```

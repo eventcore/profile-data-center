@@ -16,12 +16,25 @@ Update Profile Schema.
 
 ```json
 {
-  "schema":{
-      "type":"object",
-      "properties":{
+    "id": "profileSchema",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://eventcore.com/schemas/json#profileSchema",
+    "title": "Profile Schema Test",
+    "EdmKeyProperties": [
+        "id"
+    ],
+    "type": "object",
+    "properties": {
+        "identities": {
           ...
-      }
-  }
+        },
+        "dossier":{
+          ...
+        },
+        "events":{
+          ...
+        }
+    }
 }
 ```
 
@@ -35,11 +48,40 @@ Update Profile Schema.
 
 ```json
 {
-  "schema":{
-      "type":"object",
-      "properties":{
+    "id": "profileSchema",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://eventcore.com/schemas/json#profileSchema",
+    "title": "Profile Schema Test",
+    "EdmKeyProperties": [
+        "id"
+    ],
+    "type": "object",
+    "properties": {
+        "identities": {
           ...
-      }
-  }
+        },
+        "dossier":{
+          ...
+        },
+        "events":{
+          ...
+        }
+    }
+}
+```
+
+## Error Responses
+
+**Condition** : User is authorized, but edits to profile schema will generate data conflicts. Summary of conflicts and verification token is presented in the response.
+
+**Code** : `409 CONFLICT`
+
+**Content example** :
+
+```json
+{
+  "message": "There are changes to this schema that would affect data!",
+  "schemaChanges": [...],
+  "verificationToken": "..."
 }
 ```

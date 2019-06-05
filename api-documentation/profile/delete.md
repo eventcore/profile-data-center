@@ -19,7 +19,7 @@ Delete Profile.
     "id":
     {
         "required": true,
-        "validation": "[Must be a valid GUID]"
+        "validation": "[Must be a valid Profile ID (GUID)]"
     },
     "reason":
     {

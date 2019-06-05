@@ -8,7 +8,7 @@ Get Profile Count.
 
 **Method** : `GET`
 
-**Auth required** : ?
+**Auth required** : YES
 
 **Permissions required** : User can read Profiles  -- OR -- User has a SuperUser role
 

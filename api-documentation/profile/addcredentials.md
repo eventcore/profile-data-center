@@ -60,7 +60,17 @@ Update a Profile and add credentials.
 {}
 ```
 
-**Condition** : User is authorized, data change references a non-existent event
+**Condition** : User is authorized, but profile is marked for deletion
+
+**Code** : `400 BAD REQUEST`
+
+**Content example** :
+
+```json
+{ "error" : "Cannot modify profile because it has been marked as deleted" }
+```
+
+**Condition** : User is authorized, id references a non-existent profile
 
 **Code** : `404 NOT FOUND`
 
@@ -70,7 +80,7 @@ Update a Profile and add credentials.
 {}
 ```
 
-**Condition** : User is authorized, data change attempts to rename an event
+**Condition** : User is authorized, data change attempts to add an already existing credential
 
 **Code** : `409 CONFLICT`
 
