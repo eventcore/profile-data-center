@@ -15,20 +15,17 @@ Migrate a Profile from one ID value to another.
 **Parameters** :
 
 ```json
+"fromId":
 {
-    "fromId":
-    {
-        "required":true,
-        "type": "string",
-        "validation": "No fromId was provided. Please provide a fromId in the request."
-    },
-    "toId":
-    {
-        "required":true,
-        "type": "string",
-        "validation": "No toId was provided. Please provide a toId in the request."
-    }
-}
+    "required":true,
+    "type": "string",
+    "validation": "No fromId was provided. Please provide a fromId in the request."
+},
+"toId":
+{
+    "required":true,
+    "type": "string",
+    "validation": "No toId was provided. Please provide a toId in the request."
 }
 ```
 
@@ -36,18 +33,12 @@ Migrate a Profile from one ID value to another.
 
 **Condition** : User is authorized and data is valid
 
-**Code** : `200 OK`
+**Code** : `204 NO CONTENT`
 
 **Content example** :
 
 ```json
-    "eventToUpdate":
-    {
-        "type": object,
-        "properties": {
-            ...
-        }
-    }
+{}
 ```
 
 ## Error Responses

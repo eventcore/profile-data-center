@@ -1,6 +1,6 @@
 # Get Event by ID
 
-Get a Event by ID value.
+Get an Event by ID value.
 
 ## Overview
 

@@ -12,17 +12,26 @@ Create a Profile.
 
 **Permissions required** : User can create Profiles -- OR -- User has a SuperUser role
 
-**Parameters** :
+**Parameters** : Profile data must be supplied in the request body
 
 ```json
 {
-    "eventToCreate":
-    {
-        "type": object,
-        "properties": {
+    "identities": [
+        ...
+    ],
+    "dossier": {
+        "firstName": "fn",
+        "lastName": "ln",
+        ...
+    },
+    "email": "email@domain.com",
+    "events": {
+        "ev1": {
             ...
         }
-    }
+    },
+    "documentType": "profile",
+    "id": "00000000-0000-0000-0000-000000000000"
 }
 ```
 
@@ -35,13 +44,25 @@ Create a Profile.
 **Content example** :
 
 ```json
-    "eventToCreate":
-    {
-        "type": object,
-        "properties": {
+{
+    "identities": [
+        ...
+    ],
+    "dossier": {
+        "firstName": "fn",
+        "lastName": "ln",
+        ...
+    },
+    "email": "email@domain.com",
+    "events": {
+        "ev1": {
             ...
         }
-    }
+    },
+    "documentType": "profile",
+    "createdDate": 1234567890,
+    "id": "00000000-0000-0000-0000-000000000000"
+}
 ```
 
 ## Error Responses
@@ -56,7 +77,27 @@ Create a Profile.
 {}
 ```
 
-**Condition** : User is authorized, but event name is already used
+**Condition** : User is authorized, but the profile ID already exists
+
+**Code** : `409 CONFLICT`
+
+**Content example** :
+
+```json
+{}
+```
+
+**Condition** : User is authorized, but the profile email already exists
+
+**Code** : `409 CONFLICT`
+
+**Content example** :
+
+```json
+{}
+```
+
+**Condition** : User is authorized, but a credential in the profile is already used
 
 **Code** : `409 CONFLICT`
 

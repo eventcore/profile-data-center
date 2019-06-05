@@ -16,13 +16,22 @@ Update a Profile.
 
 ```json
 {
-    "eventToUpdate":
-    {
-        "type": object,
-        "properties": {
+    "identities": [
+        ...
+    ],
+    "dossier": {
+        "firstName": "fn",
+        "lastName": "ln",
+        ...
+    },
+    "email": "email@domain.com",
+    "events": {
+        "ev1": {
             ...
         }
-    }
+    },
+    "documentType": "profile",
+    "id": "00000000-0000-0000-0000-000000000000"
 }
 ```
 
@@ -35,13 +44,24 @@ Update a Profile.
 **Content example** :
 
 ```json
-    "eventToUpdate":
-    {
-        "type": object,
-        "properties": {
+{
+    "identities": [
+        ...
+    ],
+    "dossier": {
+        "firstName": "fn",
+        "lastName": "ln",
+        ...
+    },
+    "email": "email@domain.com",
+    "events": {
+        "ev1": {
             ...
         }
-    }
+    },
+    "documentType": "profile",
+    "id": "00000000-0000-0000-0000-000000000000"
+}
 ```
 
 ## Error Responses
@@ -56,7 +76,17 @@ Update a Profile.
 {}
 ```
 
-**Condition** : User is authorized, data change references a non-existant event
+**Condition** : User is authorized, but profile is marked for deletion
+
+**Code** : `400 BAD REQUEST`
+
+**Content example** :
+
+```json
+{ "message" : "Cannot modify profile because it has been marked as deleted" }
+```
+
+**Condition** : User is authorized, data change attempts to update profile ID to value which does not exist
 
 **Code** : `404 NOT FOUND`
 
@@ -66,7 +96,7 @@ Update a Profile.
 {}
 ```
 
-**Condition** : User is authorized, data change attempts to rename an event
+**Condition** : User is authorized, data change attempts to update email to a value which already exists
 
 **Code** : `409 CONFLICT`
 
@@ -74,4 +104,17 @@ Update a Profile.
 
 ```json
 {}
+```
+
+**Condition** : User is authorized, data change attempts to update an already migrated profile. Response contains a verification token to resubmit the request.
+
+**Code** : `409 CONFLICT`
+
+**Content example** :
+
+```json
+{
+    "message": "Profile with id '<Id>' has been migrated! Verify that you want to apply these updates to the profile by resending the request with the attached verification token in a querystring parameter 'verificationToken'",
+    "verificationToken": "..."
+}
 ```

@@ -1,6 +1,6 @@
 # Update Event
 
-Update an Event.
+Update an Event. Replace the contents/properties of the event
 
 ## Overview
 
@@ -12,17 +12,16 @@ Update an Event.
 
 **Permissions required** : User can update Events -- OR -- User has a SuperUser role
 
-**Parameters** :
+**Parameters** : Event data must be supplied in the request body
 
 ```json
 {
-    "eventToUpdate":
-    {
-        "type": object,
-        "properties": {
-            ...
-        }
-    }
+    "documentType": "RegistrationEvent",
+    "id": "12345",
+    "eventName": "testEvent",
+    "startDate": "2019-05-03",
+    "endDate": "2019-05-25",
+    "description": "A Test Event",
 }
 ```
 
@@ -35,13 +34,16 @@ Update an Event.
 **Content example** :
 
 ```json
-    "eventToUpdate":
-    {
-        "type": object,
-        "properties": {
-            ...
-        }
-    }
+{
+    "documentType": "RegistrationEvent",
+    "id": "12345",
+    "eventName": "testEvent",
+    "startDate": "2019-05-03",
+    "endDate": "2019-05-25",
+    "description": "A Test Event",
+    "_rid": "2MQgAMkBvuoGAAAAAAAAAA==",
+    "_ts": 1558020704
+}
 ```
 
 ## Error Responses

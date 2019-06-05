@@ -16,7 +16,7 @@ Search Events records using OData query options.
 
 ## Success Responses
 
-**Condition** : User provides search parameters which match records i.e. `/api/Event?$filter=valid`
+**Condition** : User provides search parameters which match records i.e. `/api/Event?$filter=[valid]`
 
 **Code** : `200 OK`
 
@@ -30,7 +30,7 @@ Search Events records using OData query options.
 }
 ```
 
-**Condition** : User provides search parameters which do not match records i.e. `/api/Event?$filter=invalid`
+**Condition** : User provides search parameters which do not match records i.e. `/api/Event?$filter=[invalid]`
 
 **Code** : `204 NO CONTENT`
 
