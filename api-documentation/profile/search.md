@@ -12,22 +12,7 @@ Search Profiles.
 
 **Permissions required** : User can read Profiles -- OR -- User has a SuperUser role
 
-**Parameters** :
-
-```json
-{
-    "id":
-    {
-        "required": true,
-        "validation": "[Must be a valid GUID]"
-    },
-    "subpath":
-    {
-        "required": false,
-        "validation":"[Must be a valid sub-path of this schema]"
-    }
-}
-```
+**Parameters** : OData search parameters are supported - [OData - Basic Querying Tutorial](https://www.odata.org/getting-started/basic-tutorial/#queryData)
 
 ## Success Responses
 
@@ -45,11 +30,12 @@ Search Profiles.
 }
 ```
 
-**Context** : User requests an ID which does not exist i.e. `/api/Profile?$filter=invalid`
+**Condition** : User requests an ID which does not exist i.e. `/api/Profile?$filter=invalid`
 
 **Code** : `204 NO CONTENT`
 
 **Content example** :
-```
-Returns No Content if there is no Profile found by the search.
+
+```json
+{}
 ```

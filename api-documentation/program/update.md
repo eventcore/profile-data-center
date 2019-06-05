@@ -46,7 +46,7 @@ Update a Program.
 
 ## Error Responses
 
-**Context** : User is authorized, data is invalid
+**Condition** : User is authorized, data is invalid
 
 **Code** : `400 BAD REQUEST`
 
@@ -56,7 +56,7 @@ Update a Program.
 {}
 ```
 
-**Context** : User is authorized, data change references a non-existant event
+**Condition** : User is authorized, data change references a non-existant event
 
 **Code** : `404 NOT FOUND`
 
@@ -66,7 +66,7 @@ Update a Program.
 {}
 ```
 
-**Context** : User is authorized, data change attempts to rename an event
+**Condition** : User is authorized, data change attempts to rename an event
 
 **Code** : `409 CONFLICT`
 

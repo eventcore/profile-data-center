@@ -46,32 +46,32 @@ Update an Event.
 
 ## Error Responses
 
-**Context** : User is authorized, data is invalid
+**Condition** : User is authorized, data is invalid.
 
 **Code** : `400 BAD REQUEST`
 
 **Content example** :
 
-```
+```json
 {}
 ```
 
-**Context** : User is authorized, data change references a non-existant event
+**Condition** : User is authorized, data change references a non-existent event.
 
 **Code** : `404 NOT FOUND`
 
 **Content example** :
 
-```
+```json
 {}
 ```
 
-**Context** : User is authorized, data change attempts to rename an event
+**Condition** : User is authorized, data change attempts to rename an event to a name which already exists.
 
 **Code** : `409 CONFLICT`
 
 **Content example** :
 
-```
+```json
 {}
 ```

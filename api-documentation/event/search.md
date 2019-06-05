@@ -1,6 +1,6 @@
 # Search Events
 
-Search Events.
+Search Events records using OData query options.
 
 ## Overview
 
@@ -12,26 +12,11 @@ Search Events.
 
 **Permissions required** : User can read Events -- OR -- User has a SuperUser role
 
-**Parameters** :
-
-```json
-{
-    "id":
-    {
-        "required": true,
-        "validation": "[Must be a valid GUID]"
-    },
-    "subpath":
-    {
-        "required": false,
-        "validation":"[Must be a valid sub-path of this schema]"
-    }
-}
-```
+**Parameters** : OData search parameters are supported - [OData - Basic Querying Tutorial](https://www.odata.org/getting-started/basic-tutorial/#queryData)
 
 ## Success Responses
 
-**Condition** : User requests an ID which exists i.e. `/api/Event?$filter=valid`
+**Condition** : User provides search parameters which match records i.e. `/api/Event?$filter=valid`
 
 **Code** : `200 OK`
 
@@ -45,11 +30,12 @@ Search Events.
 }
 ```
 
-**Context** : User requests an ID which does not exist i.e. `/api/Event?$filter=invalid`
+**Condition** : User provides search parameters which do not match records i.e. `/api/Event?$filter=invalid`
 
 **Code** : `204 NO CONTENT`
 
 **Content example** :
-```
-Returns No Content if there is no Event found by the search.
+
+```json
+{}
 ```

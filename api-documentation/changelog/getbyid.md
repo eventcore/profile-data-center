@@ -1,6 +1,6 @@
 # Get Changelog by ID
 
-Get a Changelog by ID.
+Get a Changelog record by ID value.
 
 ## Overview
 
@@ -45,12 +45,12 @@ Get a Changelog by ID.
 }
 ```
 
-**Context** : User requests an ID which does not exist i.e. `/api/Changelog(00000000-0000-0000-0000-000000000001)`
+**Condition** : User requests an ID which does not exist i.e. `/api/Changelog(00000000-0000-0000-0000-000000000001)`
 
 **Code** : `204 NO CONTENT`
 
 **Content example** :
 
 ```json
-Returns No Content if there is no Changelog found by the search.
+{}
 ```

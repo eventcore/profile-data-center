@@ -14,8 +14,14 @@ Get Event Metadata.
 
 **Parameters** :
 
-```
-N/A
+```json
+{
+    "$metadata":
+    {
+        "required": true,
+        "validation": "[Must be the explicit value $metadata]"
+    }
+}
 ```
 
 ## Success Responses
@@ -37,6 +43,7 @@ N/A
                 </Key>
                 <Property Name="_ts" Type="Edm.Int64" />
                 <Property Name="id" Type="Edm.String" />
+                ...
             </EntityType>
         </Schema>
     </edmx:DataServices>

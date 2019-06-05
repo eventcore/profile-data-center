@@ -1,6 +1,6 @@
 # Get Changelog Count
 
-Get Changelog Count.
+Get a count of all changelog records within a program.
 
 ## Overview
 
@@ -8,7 +8,7 @@ Get Changelog Count.
 
 **Method** : `GET`
 
-**Auth required** : ?
+**Auth required** : YES
 
 **Permissions required** : User can read Changelogs  -- OR -- User has a SuperUser role
 
@@ -16,7 +16,7 @@ Get Changelog Count.
 
 ```json
 {
-    "count":
+    "$count":
     {
         "required": true,
         "validation": "[Must be the explicit value $count]"
@@ -26,14 +26,12 @@ Get Changelog Count.
 
 ## Success Responses
 
+**Condition** : User is authorized
+
 **Code** : `200 OK`
 
 **Content example** :
 
 ```json
-{
-  "value": {
-      12345
-  }
-}
+12345
 ```
