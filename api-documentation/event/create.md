@@ -16,13 +16,12 @@ Create a new Event within a program.
 
 ```json
 {
-    "eventToCreate":
-    {
-        "type": object,
-        "properties": {
-            ...
-        }
-    }
+    "documentType": "RegistrationEvent",
+    "id": "12345",
+    "eventName": "testEvent",
+    "startDate": "2019-05-03",
+    "endDate": "2019-05-25",
+    "description": "A Test Event",
 }
 ```
 
@@ -35,13 +34,16 @@ Create a new Event within a program.
 **Content example** :
 
 ```json
-    "eventToCreate":
-    {
-        "type": object,
-        "properties": {
-            ...
-        }
-    }
+{
+    "documentType": "RegistrationEvent",
+    "id": "12345",
+    "eventName": "testEvent",
+    "startDate": "2019-05-03",
+    "endDate": "2019-05-25",
+    "description": "A Test Event",
+    "_rid": "2MQgAMkBvuoGAAAAAAAAAA==",
+    "_ts": 1558020704
+}
 ```
 
 ## Error Responses

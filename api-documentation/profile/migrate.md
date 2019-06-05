@@ -1,6 +1,6 @@
 # Migrate Profile
 
-Migrate a Profile.
+Migrate a Profile from one ID value to another.
 
 ## Overview
 
