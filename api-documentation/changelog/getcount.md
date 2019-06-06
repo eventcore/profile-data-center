@@ -12,18 +12,6 @@ Get a count of all changelog records within a program.
 
 **Permissions required** : User can read Changelogs  -- OR -- User has a SuperUser role
 
-**Parameters** :
-
-```json
-{
-    "$count":
-    {
-        "required": true,
-        "validation": "[Must be the explicit value $count]"
-    }
-}
-```
-
 ## Success Responses
 
 **Condition** : User is authorized

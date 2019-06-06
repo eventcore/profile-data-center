@@ -1,6 +1,6 @@
 # Update Tag Schema
 
-Update Tag Schema.
+Replaces the existing tag schema with the schema posted in the request body.
 
 ## Overview
 
@@ -14,13 +14,20 @@ Update Tag Schema.
 
 **Parameters** :
 
+***Body***
+
 ```json
 {
-  "schema":{
-      "type":"object",
-      "properties":{
-          ...
-      }
+  "tags": {
+    "additionalProp1": [
+      "string"
+    ],
+    "additionalProp2": [
+      "string"
+    ],
+    "additionalProp3": [
+      "string"
+    ]
   }
 }
 ```
@@ -35,11 +42,16 @@ Update Tag Schema.
 
 ```json
 {
-  "schema":{
-      "type":"object",
-      "properties":{
-          ...
-      }
+  "tags": {
+    "additionalProp1": [
+      "string"
+    ],
+    "additionalProp2": [
+      "string"
+    ],
+    "additionalProp3": [
+      "string"
+    ]
   }
 }
 ```

@@ -1,6 +1,6 @@
 # Get Profile Schema
 
-Get the Profile Schema for your program. Requires authorization to the program.
+Returns a JSON schema for the profile of the current PDC-Program. This schema defines all the fields and field restrictions for profiles in the current program.
 
 ## Overview
 
