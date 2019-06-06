@@ -14,7 +14,7 @@ Update a Profile and add credentials.
 
 **Parameters** :
 
-***Request Querystring***
+***Querystring***
 
 ```json
 "id":
@@ -24,7 +24,7 @@ Update a Profile and add credentials.
 }
 ```
 
-***Request Body***: Must be a valid Profile Credential object (in JSON schema format)
+***Body***: Must be a valid Profile Credential object (in JSON schema format)
 
 ```json
 {
