@@ -1,6 +1,6 @@
 # Update Profile Schema
 
-Update Profile Schema.
+Replaces the existing profile schema with the schema posted in the form body. The schema must comply with draft 6 of JSON schema.
 
 ## Overview
 
@@ -13,6 +13,8 @@ Update Profile Schema.
 **Permissions required** : User can update Profile Schema -- OR -- User has a SuperUser role
 
 **Parameters** :
+
+***Body***
 
 ```json
 {

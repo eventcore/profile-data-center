@@ -15,17 +15,15 @@ Get a Changelog record by ID value.
 **Parameters** :
 
 ```json
+"id":
 {
-    "id":
-    {
-        "required": true,
-        "validation": "[Must be a valid GUID]"
-    },
-    "subpath":
-    {
-        "required": false,
-        "validation":"[Must be a valid sub-path of this schema]"
-    }
+    "required": true,
+    "validation": "[Must be a valid GUID]"
+},
+"subpath":
+{
+    "required": false,
+    "validation":"[Must be a valid sub-path of this schema]"
 }
 ```
 

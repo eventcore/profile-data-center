@@ -1,6 +1,6 @@
 # Create Program
 
-Create a Program.
+Adds a new program using the provided program name (Id).
 
 ## Overview
 
@@ -18,13 +18,9 @@ Create a Program.
 
 ```json
 {
-    "eventToCreate":
-    {
-        "type": object,
-        "properties": {
-            ...
-        }
-    }
+  "displayName": "string",
+  "description": "string",
+  "id": "string"
 }
 ```
 

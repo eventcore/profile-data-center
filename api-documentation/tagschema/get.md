@@ -1,6 +1,6 @@
 # Get Tag Schema
 
-Get Tag Schema.
+Returns a JSON schema for the tags of the current PDC-Program. This schema defines all the fields and field restrictions for tags in the current program.
 
 ## Overview
 
@@ -12,12 +12,6 @@ Get Tag Schema.
 
 **Permissions required** : User can read Tag Schema -- OR -- User has a SuperUser role
 
-**Parameters** :
-
-```json
-N/A
-```
-
 ## Success Responses
 
 **Condition** : User is authorized.
@@ -28,11 +22,16 @@ N/A
 
 ```json
 {
-  "schema":{
-      "type":"object",
-      "properties":{
-          ...
-      }
+  "tags": {
+    "additionalProp1": [
+      "string"
+    ],
+    "additionalProp2": [
+      "string"
+    ],
+    "additionalProp3": [
+      "string"
+    ]
   }
 }
 ```
