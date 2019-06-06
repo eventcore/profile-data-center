@@ -1,6 +1,6 @@
 # Get Profile Schema
 
-Get Profile Schema.
+Get the Profile Schema for your program. Requires authorization to the program.
 
 ## Overview
 
@@ -11,12 +11,6 @@ Get Profile Schema.
 **Auth required** : YES
 
 **Permissions required** : User can read Profile Schema -- OR -- User has a SuperUser role
-
-**Parameters** :
-
-```json
-N/A
-```
 
 ## Success Responses
 
@@ -29,8 +23,6 @@ N/A
 ```json
 {
     "id": "profileSchema",
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://eventcore.com/schemas/json#profileSchema",
     "title": "Profile Schema Test",
     "EdmKeyProperties": [
         "id"

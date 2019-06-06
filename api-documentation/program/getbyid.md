@@ -15,18 +15,16 @@ Get a Program by ID.
 **Parameters** :
 
 ```json
+"id":
 {
-    "id":
-    {
-        "required": true,
-        "type": "string",
-        "validation": "[Must be a valid Program ID - 3 to 40 alphanumeric characters with no spaces]"
-    },
-    "subpath":
-    {
-        "required": false,
-        "validation":"[Must be a valid sub-path of this schema]"
-    }
+    "required": true,
+    "type": "string",
+    "validation": "[Must be a valid Program ID - 3 to 40 alphanumeric characters with no spaces]"
+},
+"subpath":
+{
+    "required": false,
+    "validation":"[Must be a valid sub-path of this schema]"
 }
 ```
 

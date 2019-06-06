@@ -12,16 +12,6 @@ Get Profile Metadata.
 
 **Permissions required** : User can read Profiles -- OR -- User has a SuperUser role
 
-**Parameters** :
-
-```json
-"$metadata":
-{
-    "required": true,
-    "validation": "[Must be the explicit value $metadata]"
-}
-```
-
 ## Success Responses
 
 **Condition** : User is authorized

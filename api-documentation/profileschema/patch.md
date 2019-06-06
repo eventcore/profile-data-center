@@ -1,6 +1,6 @@
 # Patch Profile Schema
 
-Patch Profile Schema.
+Patch a program's Profile Schema.
 
 ## Overview
 
@@ -14,39 +14,45 @@ Patch Profile Schema.
 
 **Parameters** :
 
+***Header***
+
 ```json
-{
-  "schema":{
-      "type":"object",
-      "properties":{
-          ...
-      }
-  }
+"verificationToken": {
+  "required": false,
+  "type": "string"
 }
+```
+
+***Body***: Accepts a collection of JSON Patch objects
+
+```json
+[
+  {
+    "value": {},
+    "path": "string",
+    "op": "string",
+    "from": "string"
+  }
+]
 ```
 
 ## Success Responses
 
-**Condition** : User is authorized.
+**Condition** : User is authorized, edits to profile schema will not generate data conflicts.
 
 **Code** : `200 OK`
 
 **Content example** :
 
 ```json
-{
-  "schema":{
-      "type":"object",
-      "properties":{
-          ...
-      }
-  }
-}
+{}
 ```
 
 ## Error Responses
 
-**Condition** : User is authorized, but edits to profile schema will generate data conflicts. Summary of conflicts and verification token is presented in the response.
+**Condition** : User is authorized, but edits to profile schema will generate data conflicts.
+
+**Result** : Summary of conflicts and verification token is presented in the response. *OVERRIDE: Request can be resubmitted with the verification token value in the header*
 
 **Code** : `409 CONFLICT`
 

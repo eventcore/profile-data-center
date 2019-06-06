@@ -6,7 +6,7 @@ Update a Program.
 
 **URL** : `/api/Program/`
 
-**Method** : `PUT`
+**Method** : `PATCH`
 
 **Auth required** : YES
 
@@ -14,16 +14,17 @@ Update a Program.
 
 **Parameters** :
 
+***Body*** : Accepts a collection of JSON Patch objects
+
 ```json
-{
-    "eventToUpdate":
-    {
-        "type": object,
-        "properties": {
-            ...
-        }
-    }
-}
+[
+  {
+    "value": {},
+    "path": "string",
+    "op": "string",
+    "from": "string"
+  }
+]
 ```
 
 ## Success Responses

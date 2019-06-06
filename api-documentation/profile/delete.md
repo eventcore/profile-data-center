@@ -6,9 +6,9 @@ Delete Profile.
 
 **URL** : `/api/Profile('{id}')`
 
-**Method** : `GET`
+**Method** : `DELETE`
 
-**Auth required** : ?
+**Auth required** : YES
 
 **Permissions required** : User can delete Profiles  -- OR -- User has a SuperUser role
 

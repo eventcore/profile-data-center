@@ -14,6 +14,8 @@ Create a Profile.
 
 **Parameters** : Profile data must be supplied in the request body
 
+***Body***
+
 ```json
 {
     "identities": [

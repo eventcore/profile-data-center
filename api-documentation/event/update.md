@@ -14,6 +14,8 @@ Update an Event. Replace the contents/properties of the event
 
 **Parameters** : Event data must be supplied in the request body
 
+***Body***
+
 ```json
 {
     "documentType": "RegistrationEvent",

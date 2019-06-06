@@ -4,7 +4,7 @@ Patch Profile Event Schema.
 
 ## Overview
 
-**URL** : `/api/ProfileSchema/`
+**URL** : `/api/ProfileSchema/{eventName}`
 
 **Method** : `PATCH`
 
@@ -14,15 +14,35 @@ Patch Profile Event Schema.
 
 **Parameters** :
 
+***Querystring***
+
 ```json
-{
-  "schema":{
-      "type":"object",
-      "properties":{
-          ...
-      }
-  }
+"eventName": {
+  "required": true,
+  "type": "string"
 }
+```
+
+***Header***
+
+```json
+"verificationToken": {
+  "required": false,
+  "type": "string"
+}
+```
+
+***Body***: Accepts a collection of JSON Patch objects
+
+```json
+[
+  {
+    "value": {},
+    "path": "string",
+    "op": "string",
+    "from": "string"
+  }
+]
 ```
 
 ## Success Responses
@@ -35,12 +55,23 @@ Patch Profile Event Schema.
 
 ```json
 {
-  "schema":{
-      "type":"object",
-      "properties":{
+    "id": "profileSchema",
+    "title": "Profile Schema Test",
+    "EdmKeyProperties": [
+        "id"
+    ],
+    "type": "object",
+    "properties": {
+        "identities": {
           ...
-      }
-  }
+        },
+        "dossier":{
+          ...
+        },
+        "events":{
+          ...
+        }
+    }
 }
 ```
 
@@ -57,6 +88,5 @@ Patch Profile Event Schema.
   "message": "There are changes to this schema that would affect data!",
   "schemaChanges": [...],
   "verificationToken": "..."
-
 }
 ```
