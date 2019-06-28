@@ -1,4 +1,4 @@
-# Patch Profile Event Schema
+# Patch Profile Externa Schema Section
 
 Patch Profile Event Schema.
 
