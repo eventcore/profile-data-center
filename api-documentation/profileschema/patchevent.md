@@ -1,8 +1,8 @@
 # Patch Profile External Schema Section
 
-A PATCH endpoint intened to allow third party developers to define their own properties on the Profile schema and share data with other third parth vendors without eventcore's involvement.
+A PATCH endpoint intended to allow third party developers to define their own properties on the Profile schema and share data with other third party vendors without eventcore's involvement.
 
-These properties are specific to the event they are created in.  The full path to these properties on the Profile will be 'events.{eventName}._externalprovider.{property}'.
+These properties are specific to the event they are created in.  The full path to these properties on the Profile will be `events.{eventName}._externalprovider.{property}`.
 
 ## Overview
 
