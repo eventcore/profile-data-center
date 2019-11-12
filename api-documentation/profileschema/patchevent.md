@@ -92,3 +92,51 @@ These properties are specific to the event they are created in.  The full path t
   "verificationToken": "..."
 }
 ```
+
+## Example PATCH Request
+
+**URL** : `/api/ProfileSchema/{eventName}`
+
+**Body example** :
+
+```json
+[
+   {
+      "value":{
+         "title":"MyAlias",
+         "type":"string"
+      },
+      "path":"/properties/myalias",
+      "op":"add"
+   },
+   {
+      "value":{
+         "title":"MobileOptIn",
+         "type":"boolean"
+      },
+      "path":"/properties/mobileoptin",
+      "op":"add"
+   },
+   {
+      "value":{
+         "title":"Industry",
+         "type":"string",
+         "enum":[
+            "Consumer Goods",
+            "Energy",
+            "Forestry & Fishing",
+            "Gaming",
+            "Health Provider",
+            "Higher Education",
+            "Insurance",
+            "Media & Entertainment",
+            "Nonprofit",
+            "Other ",
+            "Retailers"
+         ]
+      },
+      "path":"/properties/industry",
+      "op":"add"
+   }
+]
+```
