@@ -81,6 +81,8 @@ These properties are specific to the event they are created in.  The full path t
 
 **Condition** : User is authorized, but edits to profile schema will generate data conflicts. Summary of conflicts and verification token is presented in the response.
 
+**Result** : Summary of conflicts and verification token is presented in the response. *OVERRIDE: Request can be resubmitted with the verification token value in the header*
+
 **Code** : `409 CONFLICT`
 
 **Content example** :
